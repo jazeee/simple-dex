@@ -15,4 +15,4 @@ This is a simple example of reading Dex API
 
 Hosted on [Github](https://simple-dex.github.io/simple-dex/)
 
-![Alt text](assets/screenshot-1.png?raw=true "Screenshot")
+![Alt text](public/screenshot-1.png?raw=true "Screenshot")
