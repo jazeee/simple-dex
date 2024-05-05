@@ -26,6 +26,7 @@ export function useAuth(credentials: Credentials | undefined) {
       Boolean(credentials?.accountName) && Boolean(credentials?.password),
     staleTime: AUTH_STALE_TIME_IN_MILLISECONDS,
     refetchInterval: AUTH_STALE_TIME_IN_MILLISECONDS,
+    refetchIntervalInBackground: true,
   });
   const {
     data: authToken,

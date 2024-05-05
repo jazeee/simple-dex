@@ -12,33 +12,40 @@ export function Reading() {
     useReading(authToken);
   return (
     <Container maxWidth="md">
-      <AccountForm
-        setCredentials={(credentials) => {
-          setCredentials(credentials);
-        }}
-      />
-      {credentials ? (
-        <Stack spacing={2}>
-          <Typography variant="h1">Results</Typography>
-          {lastReading ? (
-            <>
-              <Typography>
-                Reading Value: {lastReading.Value} mg/dL, trend:{' '}
-                {lastReading.Trend}
-              </Typography>
-            </>
-          ) : (
-            <Skeleton />
-          )}
-          <Typography variant="h2">Debug</Typography>
-          <Typography variant="caption">
-            AuthState: {JSON.stringify({ isAuthSuccess, isAuthError })}
-          </Typography>
-          <Typography variant="caption">
-            ReadingState: {JSON.stringify({ isReadingSuccess, isReadingError })}
-          </Typography>
-        </Stack>
-      ) : null}
+      <Stack spacing={2}>
+        <AccountForm
+          setCredentials={(credentials) => {
+            setCredentials(credentials);
+          }}
+        />
+        {credentials ? (
+          <Stack spacing={2}>
+            <Typography variant="h1">Results</Typography>
+            <Typography variant="h2" component="p" color="primary">
+              {lastReading ? (
+                <>
+                  Reading Value: <b>{lastReading.Value} mg/dL</b>
+                  <br />
+                  Trend: <b>{lastReading.Trend}</b>
+                </>
+              ) : (
+                <>
+                  <Skeleton />
+                  <Skeleton />
+                </>
+              )}
+            </Typography>
+            <Typography variant="h2">Debug</Typography>
+            <Typography variant="caption">
+              AuthState: {JSON.stringify({ isAuthSuccess, isAuthError })}
+            </Typography>
+            <Typography variant="caption">
+              ReadingState:{' '}
+              {JSON.stringify({ isReadingSuccess, isReadingError })}
+            </Typography>
+          </Stack>
+        ) : null}
+      </Stack>
     </Container>
   );
 }

@@ -46,6 +46,7 @@ export function useReading(authToken: string | undefined) {
     enabled: Boolean(authToken),
     staleTime: READING_STALE_TIME_IN_MILLISECONDS,
     refetchInterval: READING_STALE_TIME_IN_MILLISECONDS,
+    refetchIntervalInBackground: true,
   });
   const {
     data: readings,

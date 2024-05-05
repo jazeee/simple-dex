@@ -17,7 +17,7 @@ export function AccountForm(props: AccountFormProps) {
         setCredentials({ accountName, password });
       }}
     >
-      <Stack marginY={1} spacing={1}>
+      <Stack spacing={2}>
         <Typography variant="h1">Dex Auth</Typography>
         <TextField
           type="text"
