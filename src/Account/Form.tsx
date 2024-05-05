@@ -22,6 +22,7 @@ export function AccountForm(props: AccountFormProps) {
         <TextField
           type="text"
           label="Account User Name"
+          autoFocus
           value={accountName}
           onChange={(event) => {
             setAccountName(event.target.value);

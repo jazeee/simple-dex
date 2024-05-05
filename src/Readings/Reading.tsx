@@ -1,6 +1,6 @@
 import { Container, Skeleton, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
-import { AccountForm } from '../Account/AccountForm';
+import { AccountForm } from '../Account/Form';
 import { Credentials } from '../Account/types';
 import { useAuth } from './useAuth';
 import { useReading } from './useReading';
